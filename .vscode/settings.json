@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "/Users/Bob/opt/anaconda3/bin/python",
+    "cSpell.words": [
+        "njit",
+        "nogil",
+        "nopython"
+    ]
+}
