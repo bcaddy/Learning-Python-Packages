@@ -26,3 +26,15 @@
 
 ## @jitclass decorator
 - Still experimental, if I need this check back
+
+
+## Automatic Parallelization
+- Using `parallel=True` argument in the jit decorator enables a bunch of parallel optimizations
+- use `prange` instead of `range` to indicate a loop that can be parallelized
+- reductions (like `+=`) can be done in the loop. See the numba docs for details
+- using `parallel_diagnostics()` to see what was done and maybe how to improve it
+
+## @stencil decorator
+- apply the same operation to every element in an array
+- requires relative indexing. I.e. the current element being operated on is `a[0]' even if it's actually the nth element and the next element in is `a[1]`
+- contains arguments for border (ghost cell) handling. Currently it only supports setting a constant
